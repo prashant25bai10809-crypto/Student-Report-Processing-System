@@ -1,7 +1,5 @@
 # Student-Report-Processing-System
 
-# Student Result Processing System
-
 This project is a simple **Python-based Student Report Card Generator**. It takes marks for five subjects as input, validates them, calculates the average, determines the grade and pass/fail status, and prints a formatted report card.
 
 ---
