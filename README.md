@@ -17,11 +17,11 @@ This project is a simple **Python-based Student Report Card Generator**. It take
   | Average Range | Grade          |
   | ------------- | -------------- |
   | < 35          | F (Failed)     |
-  | 35–54         | D (Just Pass)  |
-  | 55–59         | C (Pass)       |
-  | 60–74         | B (Average)    |
-  | 75–89         | A (Good)       |
-  | 90–100        | A+ (Excellent) |
+  | 35–54         | D (Passed)     |
+  | 55–59         | C (Passed)     |
+  | 60–74         | B (Passed)     |
+  | 75–89         | A (Passed)     |
+  | 90–100        | A+ (Passed)    |
 * Displays a **structured report card**.
 
 ---
