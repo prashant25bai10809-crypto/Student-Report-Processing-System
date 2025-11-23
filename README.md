@@ -4,7 +4,7 @@ This project is a simple **Python-based Student Report Card Generator**. It take
 
 ---
 
-## 📌 Features
+##  Features
 
 * Accepts marks for **English, Maths, Science, Social, Hindi**.
 * Validates user input to ensure marks are **between 0 and 100**.
@@ -26,7 +26,7 @@ This project is a simple **Python-based Student Report Card Generator**. It take
 
 ---
 
-## 📂 File Structure
+##  File Structure
 
 ```
 project/
@@ -36,7 +36,7 @@ project/
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
 1. Ensure Python is installed on your system.
 2. Save the code into a file named `student_report.py`.
@@ -50,7 +50,7 @@ python student_report.py
 
 ---
 
-## 🧠 How It Works
+##  How It Works
 
 ### 1. **Input Validation**
 
@@ -76,7 +76,7 @@ The function `get_mark()` ensures marks are integers between 0 and 100.
 
 ---
 
-## 📝 Example Output
+##  Example Output
 
 ```
 ======= STUDENT REPORT CARD =======
@@ -97,7 +97,7 @@ Grade      : A
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 
 * Add GUI using Tkinter.
 * Export report card as PDF.
@@ -106,6 +106,6 @@ Grade      : A
 
 ---
 
-## 📄 License
+##  License
 
 This project is free to use and modify for educational purposes.
