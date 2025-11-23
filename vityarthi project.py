@@ -1,70 +1,59 @@
-#taking marks as a input from user which should be in range 0 - 100
+#taking inputs from user
+print("**** STUDENT RESULT PROCESSING SYSTEM ****")
+name = input("Enter student name: ")
+subjects = ["English", "Maths", "Science", "Social", "Hindi"]
+marks = []
 
-def get_mark(subjects):
 
+for sub in subjects:
     while True:
-        mark = int(input(f"Enter marks in {subjects}: "))
-        if 0 <= mark <= 100:
-            return mark
-        else:
-            print(" X Marks must be between 0 and 100. Try again.")
+            mark = int(input(f"Enter marks in {sub}: "))
+            if 0 <= mark <= 100:
+                marks.append(mark)
+                break # jump to the next stbject once input given correctly
+            else:
+                print(" X--Error--X : Marks must be between 0 and 100.")
+       
 
-# checking the conditions for pass or failed based on average marks
+average = sum(marks) / len(marks)
+status = ""
+grade = ""
 
-def calculate(avg, marks):
-    
-    if any(m < 30 for m in marks):
-        return "Failed", "F"
-    if avg < 35:
-        return "Failed", "F"
-    elif avg < 55:
-        return "Just Pass", "D"
-    elif avg < 60:
-        return "Pass", "C"
-    elif avg < 75:
-        return "Average", "B"
-    elif avg < 90:
-        return "Good", "A"
-    elif avg < 100:
-        return "Excellent", "A+"
-    else:
-        return "Invalid", "NA"
-
-# processing for generating final report card
-
-def report_card(name, marks, avg, grade, status):
-    
-    print("\n======= STUDENT REPORT CARD =======")
-    print("-----------------------------------")
-    print("Name:", name.capitalize())
-    print("-----------------------------------")
-    subjects = ["English", "Maths", "Science", "Social", "Hindi"]
-
-    for s, m in zip(subjects, marks):
-        print(f"{s}: {m}")
-
-    print("-----------------------------------")
-    print(f"Percentage : {avg}%")
-    print(f"Result     : {status}")
-    print(f"Grade      : {grade}")
-    print("===================================")
+# conditions to calculate grade according to percentage
+if any(m < 30 for m in marks):
+    status, grade = "Failed", "F"
+elif average < 35:
+    status, grade = "Failed", "F"
+elif average < 55:
+    status, grade = "Passed", "D"
+elif average < 60:
+    status, grade = "Passed", "C"
+elif average < 75:
+    status, grade = "Passed", "B"
+elif average < 90:
+    status, grade = "Passed", "A"
+elif average <= 100:
+    status, grade = "Passed", "A+"
+else:
+    status, grade = "Invalid", "NA"
 
 
-# taking input from user 
+# report card - final output 
+print("\n****** STUDENT REPORT CARD ******")
+print("---------------------------------")
+print("Name:",name.capitalize())
+print("---------------------------------")
 
-def insert():
-    print("==== STUDENT RESULT PROCESSING SYSTEM ====")
-    name = input("Enter student name: ")
+for s, m in zip(subjects, marks):
+    print(f"{s}: {m}")
 
-    subjects = ["English", "Maths", "Science", "Social", "Hindi"]
-    marks = [get_mark(s) for s in subjects]
+print("---------------------------------")
+print(f"Percentage : {average}%")
+print(f"Result     : {status}")
+print(f"Grade      : {grade}")
+print("*********************************")
 
-    avg = sum(marks) / len(marks)
-    status, grade = calculate(avg, marks)
 
-    report_card(name, marks, avg, grade, status)
-
-insert()
 
 
 
